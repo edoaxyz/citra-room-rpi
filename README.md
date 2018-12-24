@@ -20,13 +20,13 @@ Following citra's wiki it needed:
  - cmake <b>3.8+</b> (this needs to be built)
  
  After you had cloned citra's source code and installed all these stuff you do ```mkdir build && cd build``` and next 
- ```cmake .. -DCMAKE_BUILD_TYPE=Release -DENABLE_QT=OFF -DENABLE_SDL2=OFF -DENABLE_CUBEB=OFF -DENABLE_ASM=OFF -DCRYPTOPP_DISABLE_AESNI=ON -DCRYPTOPP_DISABLE_ASM=ON -DCRYPTOPP_DISABLE_CXXFLAGS_OPTI=ON -DCRYPTOPP_DISABLE_SSSE3=ON```
+ ```cmake .. -DCMAKE_BUILD_TYPE=Release -DENABLE_QT=OFF -DENABLE_SDL2=ON -DENABLE_CUBEB=OFF -DENABLE_ASM=OFF -DCRYPTOPP_DISABLE_AESNI=ON -DCRYPTOPP_DISABLE_ASM=ON -DCRYPTOPP_DISABLE_CXXFLAGS_OPTI=ON -DCRYPTOPP_DISABLE_SSSE3=ON```
  disabling useless stuff.<br>
  
  <b>NOTE:</b> if you used the previous guide for installing GCC 8 
  you need to provide to cmake the new path for it so the entire command will be 
- ```cmake .. -DCMAKE_C_COMPILER=/usr/local/gcc-8.1.0/bin/gcc-8.1.0 -DCMAKE_CXX_COMPILER=/usr/local/gcc-8.1.0/bin/g++-8.1.0 -DENABLE_QT=OFF -DENABLE_SDL2=OFF -DENABLE_CUBEB=OFF -DENABLE_ASM=OFF -DCRYPTOPP_DISABLE_AESNI=ON -DCRYPTOPP_DISABLE_ASM=ON -DCRYPTOPP_DISABLE_CXXFLAGS_OPTI=ON -DCRYPTOPP_DISABLE_SSSE3=ON```
+ ```cmake .. -DCMAKE_C_COMPILER=/usr/local/gcc-8.1.0/bin/gcc-8.1.0 -DCMAKE_CXX_COMPILER=/usr/local/gcc-8.1.0/bin/g++-8.1.0 -DENABLE_QT=OFF -DENABLE_SDL2=ON -DENABLE_CUBEB=OFF -DENABLE_ASM=OFF -DCRYPTOPP_DISABLE_AESNI=ON -DCRYPTOPP_DISABLE_ASM=ON -DCRYPTOPP_DISABLE_CXXFLAGS_OPTI=ON -DCRYPTOPP_DISABLE_SSSE3=ON```
  
  And next ```make -j2```.
- At the end you will find you binary file in ```.../build/src/dedicated-room/citra-room```. 
+ At the end you will find you binary file in ```.../build/bin/citra-room```. 
  Before running remember to specify the new library path.
